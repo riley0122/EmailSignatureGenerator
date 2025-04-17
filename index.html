@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email signature generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Basic E-mail signature generator</h1>
+    <div id="input">
+        <input type="text" placeholder="name" name="name" id="Iname">
+        <input type="text" placeholder="title" name="title" id="Ititle">
+        <input type="text" placeholder="company" name="company" id="Icompany">
+        <input type="url" placeholder="company link" name="companylink" id="IcompanyLink">
+        <input type="tel" placeholder="Phone Nr." name="tel" id="Itel">
+        <input type="email" placeholder="email" name="email" id="Iemail">
+        <input type="url" placeholder="Image link" name="image" id="Iimage">
+    </div>
+    <br>
+    <br>
+    <div id="signature" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; gap: 10px">
+        <img src="https://www.strasys.uk/wp-content/uploads/2022/02/Depositphotos_484354208_S.jpg" id="sig_image" style="height: 100px; border-radius: 5px; width: 100px; object-fit: cover;">
+        <div>
+            <b id="sig_name">John Doe</b>
+            <small><span id="sig_title">Software Engineer</span> @ <a id="sig_company" href="https://example.com" target="_blank">Company</a></small>
+            <style>
+                td {
+    
+                }
+            </style>
+            <br>
+            <table>
+                <tr>
+                    <td id="signature_table_data">Tel.</td>
+                    <td><a id="sig_tel" href="tel:+123456789">+1 23456789</a></td>
+                </tr>
+                <tr>
+                    <td id="signature_table_data">E-mail</td>
+                    <td><a id="sig_email" href="mailto:J.Doe@company.com">J.Doe@company.com</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br>
+    <button onclick="exportSignature()">Export</button>
+    <div id="outputContainer"></div>
+    <script src="app.js"></script>
+</body>
+</html>
